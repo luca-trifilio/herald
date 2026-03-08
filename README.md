@@ -4,6 +4,21 @@ Terminal digest of your tech newsletters, powered by Gmail + Claude AI.
 
 Every morning, Herald fetches emails from your configured newsletter senders, summarises each article via the Anthropic Claude API, and presents a prioritised, interactive digest in the terminal. Discarded items teach Herald what you dislike.
 
+## Install
+
+### Homebrew (macOS)
+```bash
+brew install luca-trifilio/herald/herald
+```
+
+### Go install
+```bash
+go install github.com/luca-trifilio/herald@latest
+```
+
+### Binary releases
+Download from [GitHub Releases](https://github.com/luca-trifilio/herald/releases).
+
 ## Prerequisites
 
 - Go 1.22+

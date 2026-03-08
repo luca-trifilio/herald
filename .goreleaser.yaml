@@ -1,0 +1,51 @@
+version: 2
+
+project_name: herald
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - binary: herald
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+
+archives:
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - README.md
+
+brews:
+  - name: herald
+    repository:
+      owner: luca-trifilio
+      name: homebrew-herald
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    folder: Formula
+    homepage: https://github.com/luca-trifilio/herald
+    description: "Terminal tech newsletter digest powered by Gmail + Claude AI"
+    install: |
+      bin.install "herald"
+    test: |
+      assert_predicate bin/"herald", :exist?
+
+changelog:
+  use: github
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+
+snapshot:
+  version_template: "{{ .Tag }}-snapshot"
