@@ -20,12 +20,12 @@ builds:
       - -s -w
 
 archives:
-  - format: tar.gz
+  - formats: [tar.gz]
     name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     files:
       - README.md
 
-brews:
+homebrew:
   - name: herald
     repository:
       owner: luca-trifilio
