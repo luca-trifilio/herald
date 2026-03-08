@@ -31,7 +31,7 @@ brews:
       owner: luca-trifilio
       name: homebrew-herald
       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    folder: Formula
+    directory: Formula
     homepage: https://github.com/luca-trifilio/herald
     description: "Terminal tech newsletter digest powered by Gmail + Claude AI"
     install: |
