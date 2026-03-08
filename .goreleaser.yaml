@@ -20,7 +20,7 @@ builds:
       - -s -w
 
 archives:
-  - formats: [tar.gz]
+  - format: tar.gz
     name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     files:
       - README.md
