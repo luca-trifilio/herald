@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export:*)",
+      "mcp__claude_ai_Gmail__gmail_read_message",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); d[''last_fetch_date'']=''2026-03-01''; print\\(json.dumps\\(d, indent=2\\)\\)\")",
+      "Bash(mv /tmp/cfg.json ~/.config/newsdigest/config.json)",
+      "Read(//Users/lucatrifilio/.config/newsdigest/**)"
+    ]
+  }
+}
