@@ -21,17 +21,8 @@ Download from [GitHub Releases](https://github.com/luca-trifilio/herald/releases
 
 ## Prerequisites
 
-- Go 1.22+
 - An [Anthropic API key](https://console.anthropic.com/)
 - Gmail account with OAuth 2.0 credentials (Google Cloud Console)
-
-## Install
-
-```bash
-git clone https://github.com/luca-trifilio/herald
-cd herald
-go build -o herald .
-```
 
 ## Setup
 
